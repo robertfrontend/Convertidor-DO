@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertidor de Monedas</title>
+    <link rel="stylesheet" href="bootstrap-4.5.0-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./sass/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="padre">
+            <header class="text-center p-4">
+                <div>
+                    <h1> Convertidor de Dolar a Peso Dominicano</h1>
+                </div>
+            </header>
+            <div class="app">
+                <div class="convertidor text-center">
+                    <div class="p-2">
+                        <p>Dolar <a href="#">👉</a> Peso Dominicano</p>
+                        <input id="psDominicano" class="form-control" type="number" 
+                            placeholder="Peso" >
+                        <a href="#" class="btn btn-primary">
+                            Convertir
+                        </a>
+                    </div>
+                    <div class="resultado" >
+                        <div class="bg-success">
+                            <h4 id="resultado" >Resultado...</h4>
+                        </div>
+                        <div class="share">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./Js/app.js"></script>
+</body>
+</html>
