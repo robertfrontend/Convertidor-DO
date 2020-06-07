@@ -64,17 +64,27 @@ header div h1 {
 .convertidor div input {
   width: 40% !important;
   padding: 20px;
+  border-radius: 30px;
+  color: white;
 }
 
-.convertidor div p {
+.convertidor div div {
+  padding: 5px;
+}
+
+.convertidor div div p {
   font-size: 20px;
   margin: 0;
   padding: 10px;
 }
 
-.convertidor div p a {
+.convertidor div div p a {
   margin: 0;
   text-decoration: none;
+}
+
+.convertidor div div h4 {
+  font-weight: bold;
 }
 
 .resultado {
@@ -92,19 +102,19 @@ header div h1 {
 }
 
 .resultado div {
-  width: 50%;
+  width: 80%;
   height: auto;
-  padding: 20px;
   color: white;
   border-radius: 10px;
 }
 
 .resultado div h4 {
-  font-weight: bold;
+  padding: 30px;
+  font-weight: normal !important;
 }
 
 .resultado div h4 span {
-  font-weight: normal;
+  font-weight: bold;
   color: rgba(255, 255, 255, 0.856);
 }
 /*# sourceMappingURL=style.css.map */

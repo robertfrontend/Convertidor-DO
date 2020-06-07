@@ -17,21 +17,36 @@
                 </div>
             </header>
             <div class="app">
+                <div class="botones text-center">
+
+                    <a href="#" id="cambiarUs" class="btn btn-lg btn-dark">
+                        Dolar a Peso Dominicano
+                    </a>
+
+                    <a href="#" id="cambiarEu" class="btn btn-lg btn-primary">
+                        Euro a Peso Dominicano
+                    </a>
+
+                </div>
                 <div class="convertidor text-center">
                     <div class="p-2">
-                        <p>Dolar <a href="#">👉</a> Peso Dominicano</p>
-                        <input id="psDominicano" class="form-control" type="number" 
-                            placeholder="Peso" >
-                        <a href="#" class="btn btn-primary">
-                            Convertir
-                        </a>
+                        <div>
+                            <h4 id="name-invertir">
+                                Dolar 👉
+                                Peso Dominicano
+                            </h4>
+                        </div>
+                        <div>
+                            <input id="psDominicano" class="form-control bg-dark text-white" type="number" 
+                            placeholder="Ingresa un valor">
+                            
+                        </div>
                     </div>
                     <div class="resultado" >
-                        <div class="bg-success">
-                            <h4 id="resultado" >Resultado...</h4>
+                        <div class="bg-dark">
+                            <h4 id="resultado" >Dolar a Peso Dominicano</h4>
                         </div>
                         <div class="share">
-
                         </div>
                     </div>
                 </div>

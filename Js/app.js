@@ -1,23 +1,90 @@
-var vDolarDo = 57.60
 
-let psDominicano = document.getElementById('psDominicano')
+// precio del dolar
+var vDolarDo = 57.60;
+// precio del Euro
+var vEuroDo = 65;
 
+let nameInvertir = document.querySelector('#name-invertir');
+let resulDiv = document.querySelector('.resultado div');
+let psDominicano = document.getElementById('psDominicano');
+let btnCambiarUs = document.getElementById('cambiarUs');
 
-psDominicano.addEventListener('keyup', () => {
+// siempre tener disponible la funcion convertir
+converUSA();
 
-    const res = psDominicano.value * vDolarDo
+// ------Convertir de Dolar a Peso Dominicano
+function converUSA() {
+
+    // evento cuando se comienza a escribir
+    psDominicano.addEventListener('keyup', () => {
     
-     document.getElementById('resultado').innerHTML = `
-         ${psDominicano.value} <span>Dolares</span> = 
-          ${Intl.NumberFormat("en-IN").format(res)} <span>Dominicanos</span>
-     `;
+        // multiplico el valor ingresado con el valor de la moneda
+        const res = psDominicano.value * vDolarDo;
 
-     const compartir = document.querySelector('.share')
+        // cambiamos letras de convertidor
+         document.getElementById('resultado').innerHTML = `
+              <span>$${Intl.NumberFormat("en-IN").format(psDominicano.value)} </span>USD = 
+              <span>$${Intl.NumberFormat("en-IN").format(res)}</span>DOP
+         `; 
+    })
+}
 
 
-     compartir.innerHTML = `
-         <a href="#">Copiar</a>
-     `;
+btnCambiarUs.addEventListener('click', () =>{
+    nameInvertir.innerHTML = `
+        Dolar 👉
+        Peso Dominicano
+    `;
+    psDominicano.classList = 'form-control bg-dark';
+    psDominicano.style.color = 'white';
+    resulDiv.classList = 'bg-dark';
+
+    document.getElementById('resultado').innerHTML = `
+        Dolar a Peso Dominicano
+    `;
+    converUSA();
 
 })
+//fin convertir USA a peso Dominicano
 
+
+// -----Convertir Euro a peso Dominicano
+
+// boton cambiar a convertidor euro
+var btnCambiar = document.getElementById('cambiarEu');
+// Evento para cambiar a Euro
+btnCambiar.addEventListener('click', cambiarEu);
+
+function cambiarEu() {
+    nameInvertir.innerHTML = `
+        Euro 👉
+        Peso Dominicano
+    `;
+
+    document.getElementById('resultado').innerHTML = `
+        Euro a Peso Dominicano
+    `;
+
+    psDominicano.classList = 'form-control bg-primary';
+    psDominicano.style.color = 'white';
+
+    resulDiv.classList = 'bg-primary';
+
+    convertirEuro();
+}
+
+function convertirEuro() {
+
+    // evento cuando se comienza a escribir
+    psDominicano.addEventListener('keyup', () =>{
+
+        // multiplico el valor ingresado con el valor de la moneda
+        const res = psDominicano.value * vEuroDo
+
+        // cambiamos letras de convertidor
+        document.getElementById('resultado').innerHTML = `
+             <span>$${Intl.NumberFormat("en-IN").format(psDominicano.value)}</span>EU = 
+             <span>$${Intl.NumberFormat("en-IN").format(res)}</span> DOP
+        `;
+    })
+}

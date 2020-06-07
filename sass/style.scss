@@ -33,14 +33,22 @@ header{
         input {
             width:40%!important;
             padding: 20px;
+            border-radius: 30px;
+            color: white;
         }
-        p {
-            font-size: 20px;
-            margin: 0;
-            padding: 10px;
-            a{
-                margin: 0;                
-                text-decoration: none;
+        div {
+            padding: 5px;
+            p {
+                font-size: 20px;
+                margin: 0;
+                padding: 10px;
+                a{
+                    margin: 0;
+                    text-decoration: none;
+                }
+            }
+            h4 {
+                font-weight: bold;
             }
         }
     }
@@ -52,15 +60,15 @@ header{
     align-items: center;
     padding: 20px;
     div {
-        width: 50%;
+        width: 80%;
         height: auto;
-        padding: 20px;
         color: white;
         border-radius: 10px;
         h4{
-            font-weight: bold;
+            padding: 30px;
+            font-weight: normal !important;
             span {
-                font-weight: normal;
+                font-weight: bold;
                 color: rgba(255, 255, 255, 0.856);
             }
         }
