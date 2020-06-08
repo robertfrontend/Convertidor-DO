@@ -18,12 +18,44 @@ header{
     }
 }
 
+.d-selecion{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    div {
+        padding: 15px 50px;
+        border: 2px solid black;
+        margin: 0px 20px;
+        border-radius: 10px;
+        cursor: pointer;
+        p {
+            font-size: 20px;
+            margin: 0;
+            color: white;
+            font-weight: bold;
+        }
+    }
+    .selecionUs{
+        background-color: #343A40;
+        border: 2px solid #343A40;
+    }
+    .selecionEu {
+        background-color: #007BFF;
+        border: 2px solid #007BFF;
+    }
+}
+
+
 .convertidor{
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 50px 0px;
     div{
         width: 80%;
         display: flex;
@@ -31,10 +63,11 @@ header{
         justify-content: center;
         align-items: center;
         input {
-            width:40%!important;
-            padding: 20px;
-            border-radius: 30px;
-            color: white;
+            width:60%!important;
+            padding: 20px 20px;
+            border-radius: 10px;
+            color: black !important;
+            border: 2px solid #343A40;
         }
         div {
             padding: 5px;
@@ -53,6 +86,8 @@ header{
         }
     }
 }
+
+
 .resultado{
     width: 100%;
     display: flex;

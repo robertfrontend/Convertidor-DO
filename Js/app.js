@@ -35,9 +35,11 @@ btnCambiarUs.addEventListener('click', () =>{
         Dolar 👉
         Peso Dominicano
     `;
-    psDominicano.classList = 'form-control bg-dark';
-    psDominicano.style.color = 'white';
+    psDominicano.style.border = '2px solid #343A40';
+    psDominicano.style.color = 'black'
     resulDiv.classList = 'bg-dark';
+    nameInvertir.style.color = '#343A40'
+
 
     document.getElementById('resultado').innerHTML = `
         Dolar a Peso Dominicano
@@ -65,10 +67,11 @@ function cambiarEu() {
         Euro a Peso Dominicano
     `;
 
-    psDominicano.classList = 'form-control bg-primary';
-    psDominicano.style.color = 'white';
-
+    psDominicano.style.border = '2px solid #007BFF';
+    psDominicano.style.color = 'black'
     resulDiv.classList = 'bg-primary';
+
+    nameInvertir.style.color = '#007BFF'
 
     convertirEuro();
 }

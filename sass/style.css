@@ -27,6 +27,48 @@ header div h1 {
   font-weight: bold;
 }
 
+.d-selecion {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.d-selecion div {
+  padding: 15px 50px;
+  border: 2px solid black;
+  margin: 0px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.d-selecion div p {
+  font-size: 20px;
+  margin: 0;
+  color: white;
+  font-weight: bold;
+}
+
+.d-selecion .selecionUs {
+  background-color: #343A40;
+  border: 2px solid #343A40;
+}
+
+.d-selecion .selecionEu {
+  background-color: #007BFF;
+  border: 2px solid #007BFF;
+}
+
 .convertidor {
   width: 100%;
   display: -webkit-box;
@@ -42,6 +84,7 @@ header div h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 50px 0px;
 }
 
 .convertidor div {
@@ -62,10 +105,11 @@ header div h1 {
 }
 
 .convertidor div input {
-  width: 40% !important;
-  padding: 20px;
-  border-radius: 30px;
-  color: white;
+  width: 60% !important;
+  padding: 20px 20px;
+  border-radius: 10px;
+  color: black !important;
+  border: 2px solid #343A40;
 }
 
 .convertidor div div {
