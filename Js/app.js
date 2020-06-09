@@ -23,7 +23,7 @@ function converUSA() {
 
         // cambiamos letras de convertidor
          document.getElementById('resultado').innerHTML = `
-              <span>$${Intl.NumberFormat("en-IN").format(psDominicano.value)} </span>USD = 
+              <span>$${Intl.NumberFormat("en-IN").format(psDominicano.value)}</span>USD = 
               <span>$${Intl.NumberFormat("en-IN").format(res)}</span>DOP
          `; 
     })

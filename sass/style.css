@@ -27,6 +27,12 @@ header div h1 {
   font-weight: bold;
 }
 
+@media screen and (max-width: 792px) {
+  header div {
+    width: 100%;
+  }
+}
+
 .d-selecion {
   width: 100%;
   display: -webkit-box;
@@ -45,7 +51,7 @@ header div h1 {
 }
 
 .d-selecion div {
-  padding: 15px 50px;
+  padding: 20px 50px;
   border: 2px solid black;
   margin: 0px 20px;
   border-radius: 10px;
@@ -60,13 +66,51 @@ header div h1 {
 }
 
 .d-selecion .selecionUs {
-  background-color: #343A40;
   border: 2px solid #343A40;
 }
 
+.d-selecion .selecionUs p {
+  color: #343A40;
+}
+
+.d-selecion .selecionUs:hover {
+  -webkit-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+  background-color: #343A40 !important;
+}
+
+.d-selecion .selecionUs:hover p {
+  color: white !important;
+}
+
 .d-selecion .selecionEu {
-  background-color: #007BFF;
   border: 2px solid #007BFF;
+}
+
+.d-selecion .selecionEu p {
+  color: #007BFF;
+}
+
+.d-selecion .selecionEu:hover {
+  -webkit-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+  background-color: #007BFF !important;
+}
+
+.d-selecion .selecionEu:hover p {
+  color: white !important;
+}
+
+@media screen and (max-width: 792px) {
+  .d-selecion {
+    -ms-flex-wrap: wrap !important;
+        flex-wrap: wrap !important;
+  }
+  .d-selecion div {
+    width: 100%;
+    margin: 10px 20px;
+    padding: 20px 10px !important;
+  }
 }
 
 .convertidor {
@@ -106,10 +150,11 @@ header div h1 {
 
 .convertidor div input {
   width: 60% !important;
-  padding: 20px 20px;
+  padding: 30px 20px;
   border-radius: 10px;
   color: black !important;
   border: 2px solid #343A40;
+  font-size: 30px;
 }
 
 .convertidor div div {
@@ -129,6 +174,14 @@ header div h1 {
 
 .convertidor div div h4 {
   font-weight: bold;
+}
+
+@media screen and (max-width: 792px) {
+  .convertidor div input {
+    width: 100% !important;
+    padding: 30px 10px;
+    font-size: 25px;
+  }
 }
 
 .resultado {
@@ -160,5 +213,14 @@ header div h1 {
 .resultado div h4 span {
   font-weight: bold;
   color: rgba(255, 255, 255, 0.856);
+}
+
+@media screen and (max-width: 792px) {
+  .resultado div {
+    width: 100%;
+  }
+  .resultado div h4 {
+    padding: 20px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

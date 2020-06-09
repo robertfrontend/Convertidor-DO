@@ -16,6 +16,11 @@ header{
             font-weight: bold;
         }
     }
+    @media screen and(max-width:792px){
+        div{
+            width: 100%;
+        }
+    }
 }
 
 .d-selecion{
@@ -24,9 +29,8 @@ header{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    
     div {
-        padding: 15px 50px;
+        padding: 20px 50px;
         border: 2px solid black;
         margin: 0px 20px;
         border-radius: 10px;
@@ -39,12 +43,39 @@ header{
         }
     }
     .selecionUs{
-        background-color: #343A40;
         border: 2px solid #343A40;
+        p {
+            color: #343A40;
+        }
+        &:hover{
+            transition: all .2s ease-out;
+            background-color:#343A40 !important;
+            p{
+                color: white !important;
+            }
+        }
     }
     .selecionEu {
-        background-color: #007BFF;
         border: 2px solid #007BFF;
+        p{
+            color: #007BFF;
+        }
+        &:hover{
+            transition: all .2s ease-out;
+            background-color:#007BFF !important;
+            p{
+                color: white !important;
+            }
+        }
+    }
+
+    @media screen and(max-width:792px){
+        flex-wrap: wrap !important;
+        div{
+            width: 100%;
+            margin: 10px 20px;
+            padding: 20px 10px !important;
+        }
     }
 }
 
@@ -64,10 +95,11 @@ header{
         align-items: center;
         input {
             width:60%!important;
-            padding: 20px 20px;
+            padding: 30px 20px;
             border-radius: 10px;
             color: black !important;
             border: 2px solid #343A40;
+            font-size: 30px;
         }
         div {
             padding: 5px;
@@ -82,6 +114,15 @@ header{
             }
             h4 {
                 font-weight: bold;
+            }
+        }
+    }
+    @media screen and(max-width:792px){
+        div {
+            input {
+                width: 100% !important;
+                padding: 30px 10px;
+                font-size: 25px;
             }
         }
     }
@@ -105,6 +146,14 @@ header{
             span {
                 font-weight: bold;
                 color: rgba(255, 255, 255, 0.856);
+            }
+        }
+    }
+    @media screen and(max-width:792px){
+        div {
+            width: 100%;
+            h4 {
+                padding: 20px;
             }
         }
     }
