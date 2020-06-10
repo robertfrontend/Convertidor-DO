@@ -9,54 +9,64 @@
 </head>
 <body>
 
-    <div class="container">
-        <div class="padre">
-            <header class="text-center p-4">
-                <div>
-                    <h1> Convertidor de Dolar a Peso Dominicano</h1>
-                </div>
-            </header>
-            <div class="app">
-                <div class="d-selecion  text-center">
-
-                    <div class="selecionUs" id="cambiarUs">
-                        <p>
-                            Dolar a Peso Dominicano
-                        </p>
+    <main>
+        <div class="container">
+            <div class="padre">
+                <header class="text-center p-4">
+                    <div>
+                        <h1> Convertidor de Dolar a Peso Dominicano</h1>
                     </div>
-
-                    <div class="selecionEu" id="cambiarEu">
-                        <p>
-                        Euro a Peso Dominicano
-                        </p>
+                </header>
+                <div class="app">
+                    <div class="d-selecion  text-center">
+    
+                        <div class="selecionUs" id="cambiarUs">
+                            <p>
+                                Dolar a Peso Dominicano
+                            </p>
+                        </div>
+    
+                        <div class="selecionEu" id="cambiarEu">
+                            <p>
+                            Euro a Peso Dominicano
+                            </p>
+                        </div>
+    
                     </div>
-
-                </div>
-                <div class="convertidor text-center">
-                    <div class="p-2">
-                        <div>
-                            <h4 id="name-invertir">
-                                Dolar 👉
-                                Peso Dominicano
-                            </h4>
+                    <div class="convertidor text-center">
+                        <div class="p-2">
+                            <div>
+                                <h4 id="name-invertir">
+                                    Dolar 👉
+                                    Peso Dominicano
+                                </h4>
+                            </div>
+                            <div>
+                                <input id="datosInput" class="form-control text-white" type="number" 
+                                placeholder="Ingresa un valor" required>
+                                
+                            </div>
                         </div>
-                        <div>
-                            <input id="psDominicano" class="form-control text-white" type="number" 
-                            placeholder="Ingresa un valor" required>
-                            
-                        </div>
-                    </div>
-                    <div class="resultado" >
-                        <div class="bg-dark">
-                            <h4 id="resultado" >Dolar a Peso Dominicano</h4>
-                        </div>
-                        <div class="share">
+                        <div class="resultado" >
+                            <div class="bg-dark">
+                                <h4 id="resultado" >Dolar a Peso Dominicano</h4>
+                            </div>
+                            <div class="share">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </main>
+
+    <footer>
+        <div>
+            <p>Creado por <a href="https://robertrm0.github.io/" target="_blank">
+                @robertrm0</a> con ❤
+            </p>
+        </div>
+    </footer>
 
     <script src="./Js/app.js"></script>
 </body>

@@ -150,8 +150,9 @@ header{
         }
     }
     @media screen and(max-width:792px){
+        padding: 0px;
         div {
-            width: 100%;
+            width: 100% !important;
             h4 {
                 padding: 20px;
             }
@@ -159,3 +160,17 @@ header{
     }
 }
 
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    div {
+        width: 100%;
+        text-align: center;
+        p {
+            margin: 0 !important;
+            padding: 0;
+        }
+    }
+}
