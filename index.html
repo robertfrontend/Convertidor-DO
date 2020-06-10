@@ -9,56 +9,45 @@
 </head>
 <body>
 
-    <main>
-        <div class="container">
-            <div class="padre">
-                <header class="text-center p-4">
-                    <div>
-                        <h1> Convertidor de Dolar a Peso Dominicano</h1>
-                    </div>
+    <div class="container">.
+        <main class="main-app">
+            <div class="app">
+                <header>
+                    <h1>Convertidor de Peso Dominicano</h1>
                 </header>
-                <div class="app">
-                    <div class="d-selecion  text-center">
-    
-                        <div class="selecionUs" id="cambiarUs">
+                <section class="seccionBotones">
+                    <div class="botones">
+                        <div class="d-usa" id="dolar">
                             <p>
                                 Dolar a Peso Dominicano
                             </p>
                         </div>
-    
-                        <div class="selecionEu" id="cambiarEu">
+                        <div class="d-eu" id="euro" >
                             <p>
-                            Euro a Peso Dominicano
+                                Euro a Peso Dominicano
                             </p>
                         </div>
-    
                     </div>
-                    <div class="convertidor text-center">
-                        <div class="p-2">
-                            <div>
-                                <h4 id="name-invertir">
-                                    Dolar 👉
-                                    Peso Dominicano
-                                </h4>
-                            </div>
-                            <div>
-                                <input id="datosInput" class="form-control text-white" type="number" 
-                                placeholder="Ingresa un valor" required>
-                                
-                            </div>
+                </section>
+                <section class="seccionInput">
+                    <p id="formato" >
+                        Seleciona que quieres convertir
+                    </p>
+                    <div class="d-inputs">
+                        <div>
+                            <input type="number" class="form-control" 
+                            placeholder="Escribe un valor" id="inputValor" >
                         </div>
-                        <div class="resultado" >
-                            <div class="bg-dark">
-                                <h4 id="resultado" >Dolar a Peso Dominicano</h4>
-                            </div>
-                            <div class="share">
-                            </div>
+                        <div>
+                            <p class="form-control text-dark" id="result">
+                                resultado
+                            </p>
                         </div>
                     </div>
-                </div>
+                </section>
             </div>
-        </div>
-    </main>
+        </main>
+    </div>
 
     <footer>
         <div>
