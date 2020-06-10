@@ -5,11 +5,13 @@ var inputVal = document.getElementById('inputValor')
 var inputResultado = document.getElementById('result')
 var formato = document.getElementById('formato')
 
-const dolar = 57;
-const euro = 60;
+const dolar = 58.13;
+const euro = 66.12;
 
 // Convertir Dolar
 btnDolar.addEventListener('click', () => {
+    inputVal.placeholder = 'Dolar'
+
     console.log('Dolar');
     
     inputVal.classList = 'form-control dolar';
@@ -38,6 +40,8 @@ function inverDolar() {
         Peso Dominicano <span id="invertirUs" >👉</span> Dolar
     `;
 
+    inputVal.placeholder = 'Peso'
+
     invertirUs.innerHTML = '👈'
 
     inputVal.addEventListener('keyup', () => {
@@ -51,6 +55,7 @@ function inverDolar() {
 
 // Convertir Euro
 btnEu.addEventListener('click', () => {
+    inputVal.placeholder = 'Euro'
     console.log('euro');
 
     inputVal.classList = 'form-control euro';
@@ -71,6 +76,8 @@ btnEu.addEventListener('click', () => {
     var invertirEu = document.getElementById('invertirEu')
     invertirEu.style.cursor = 'pointer'
     invertirEu.addEventListener('click', invertirEuro)
+
+
 });
 
 function invertirEuro() {
@@ -79,6 +86,8 @@ function invertirEuro() {
     formato.innerHTML = `
         Peso Dominicano <span id="invertirEu" >👉</span> Euro
     `;
+
+    inputVal.placeholder = 'Peso'
 
     invertirEu.innerHTML = '👈'
 
