@@ -1,100 +1,75 @@
-// variables
+// -----Variables------
+
 var btnDolar = document.getElementById('dolar')
 var btnEu = document.getElementById('euro')
 var inputVal = document.getElementById('inputValor')
 var inputResultado = document.getElementById('result')
 var formato = document.getElementById('formato')
 
-const dolar = 58.13;
-const euro = 66.12;
+const dolar = 58;
+const euro = 66;
 
-// Convertir Dolar
-btnDolar.addEventListener('click', () => {
-    inputVal.placeholder = 'Dolar'
+// -----Clases------
 
-    console.log('Dolar');
-    
-    inputVal.classList = 'form-control dolar';
-    inputResultado.style.display = 'block';
-    formato.innerHTML = `
-        Dolar <span id="invertirUs" >👉</span> Peso Dominicano
-    `;
-    
-    inputVal.addEventListener('keyup', () => {
-        var sumatoria = inputVal.value * dolar;
-        inputResultado.innerHTML = `
-            $${Intl.NumberFormat().format(sumatoria) }
+class Interfaz {
+    imprimir(valor, place, style) {
+        inputVal.placeholder = `${place}`
+
+        console.log(`${place}`);
+        
+        // mostrar los inputs
+        inputVal.classList = `form-control ${style} `;
+        inputResultado.classList = `form-control ${style} `;
+        inputResultado.style.display = 'block';
+        formato.innerHTML = `
+            ${place} <span >👉</span> Peso Dominicano
         `;
-    })
-
-    var invertirUs = document.getElementById('invertirUs')
-    invertirUs.style.cursor = 'pointer'
-    invertirUs.addEventListener('click', inverDolar)
-
-});
-
-function inverDolar() {
-    const psDominicano = 0.017;
-
-    formato.innerHTML = `
-        Peso Dominicano <span id="invertirUs" >👉</span> Dolar
-    `;
-
-    inputVal.placeholder = 'Peso'
-
-    invertirUs.innerHTML = '👈'
-
-    inputVal.addEventListener('keyup', () => {
-        var sumatoria = inputVal.value * psDominicano
-        inputResultado.innerHTML = `
-        $${Intl.NumberFormat().format(sumatoria) }
-    `;
-    })
-
+        
+        // mientra se escribe se muestra
+        inputVal.addEventListener('keyup', () => {
+            // multiplicamos el valor del input con el valor del dolar
+            var sumatoria = inputVal.value * `${valor}`;
+    
+            // mostramos el total
+            inputResultado.value = sumatoria
+        })
+    }
 }
 
-// Convertir Euro
+// -----Event Listener------
+
+// event dolar
+btnDolar.addEventListener('click', () => {
+    convertirDolar();
+});
+// event euro
 btnEu.addEventListener('click', () => {
-    inputVal.placeholder = 'Euro'
-    console.log('euro');
-
-    inputVal.classList = 'form-control euro';
-    inputResultado.style.display = 'block';
-    formato.innerHTML = `
-        Euro <span id="invertirEu" >👉</span> Peso Dominicano
-    `;
-
-    inputVal.addEventListener('keyup', () => {
-
-        var sumatoria = inputVal.value * euro;
-
-        inputResultado.innerHTML = `
-            $${Intl.NumberFormat().format(sumatoria) }
-        `;
-    })
-
-    var invertirEu = document.getElementById('invertirEu')
-    invertirEu.style.cursor = 'pointer'
-    invertirEu.addEventListener('click', invertirEuro)
-
-
+    convertirEuro();
 });
 
-function invertirEuro() {
-    const psDominicano = 0.015;
+// -----Funciones------
 
-    formato.innerHTML = `
-        Peso Dominicano <span id="invertirEu" >👉</span> Euro
-    `;
+//convertir dolar
+function convertirDolar() {
+    // creamos una nueva ui
+    const ui = new Interfaz();
 
-    inputVal.placeholder = 'Peso'
+    // agregamos los datos para convertir y llamamos a la clase
+    ui.imprimir(dolar, 'Dolar', 'dolar')
 
-    invertirEu.innerHTML = '👈'
+    inputVal.value = ''
+    inputResultado.value = ''
 
-    inputVal.addEventListener('keyup', () => {
-        var sumatoria = inputVal.value * psDominicano
-        inputResultado.innerHTML = `
-        $${Intl.NumberFormat().format(sumatoria) }
-    `;
-    })
+};
+
+// convertir euro
+function convertirEuro() {
+    // creamos una nueva ui
+    const ui = new Interfaz();
+
+    // agregamos los datos para convertir y llamamos a la clase
+    ui.imprimir(euro, 'Euro', 'euro')
+
+    inputVal.value = ''
+    inputResultado.value = ''
 }
