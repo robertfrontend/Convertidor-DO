@@ -1,18 +1,22 @@
+'use strict'
 // -----Variables------
 
-var btnDolar = document.getElementById('dolar')
-var btnEu = document.getElementById('euro')
-var inputVal = document.getElementById('inputValor')
-var inputResultado = document.getElementById('result')
-var formato = document.getElementById('formato')
+const btnDolar = document.getElementById('dolar'),
+      btnEu = document.getElementById('euro'),
+      inputVal = document.getElementById('inputValor'),
+      inputResultado = document.getElementById('result'),
+      formato = document.getElementById('formato'),
+      tsDolar = document.querySelector('#ts-dolar'),
+      tsEuro = document.querySelector('#ts-euro'),
+      alerta = document.querySelector('.d-alert')
 
-const dolar = 58;
-const euro = 66;
+var dolar = 58;
+var euro = 66;
 
 // -----Clases------
 
 class Interfaz {
-    imprimir(valor, place, style) {
+    imprimir(valor, place, style, alert) {
         inputVal.placeholder = `${place}`
 
         console.log(`${place}`);
@@ -33,13 +37,22 @@ class Interfaz {
             // mostramos el total
             inputResultado.value = sumatoria
         })
-    }
+        alerta.innerHTML = `
+            <div class="alert  text-white text-center " role="alert">
+                ${alert} 
+            </div>
+        `;
+        setTimeout( () => {
+            alerta.innerHTML = `
+            `;
+        },3000)
+    };
 }
-
 // -----Event Listener------
 
 // event dolar
 btnDolar.addEventListener('click', () => {
+
     convertirDolar();
 });
 // event euro
@@ -55,10 +68,15 @@ function convertirDolar() {
     const ui = new Interfaz();
 
     // agregamos los datos para convertir y llamamos a la clase
-    ui.imprimir(dolar, 'Dolar', 'dolar')
+    ui.imprimir(
+        dolar, 
+        'Dolar', 
+        'dolar',
+        'Dolar a Peso Dominicano'
+    );
 
-    inputVal.value = ''
-    inputResultado.value = ''
+    inputVal.value = '';
+    inputResultado.value = '';
 
 };
 
@@ -68,8 +86,13 @@ function convertirEuro() {
     const ui = new Interfaz();
 
     // agregamos los datos para convertir y llamamos a la clase
-    ui.imprimir(euro, 'Euro', 'euro')
+    ui.imprimir(
+        euro, 
+        'Euro', 
+        'euro',
+        'Euro a Peso Dominicano'
 
-    inputVal.value = ''
-    inputResultado.value = ''
+    );
+    inputVal.value = '';
+    inputResultado.value = '';
 }
