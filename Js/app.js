@@ -1,4 +1,3 @@
-'use strict'
 // -----Variables------
 
 const btnDolar = document.getElementById('dolar'),
@@ -8,19 +7,24 @@ const btnDolar = document.getElementById('dolar'),
       formato = document.getElementById('formato'),
       tsDolar = document.querySelector('#ts-dolar'),
       tsEuro = document.querySelector('#ts-euro'),
-      alerta = document.querySelector('.d-alert')
+      alerta = document.querySelector('.d-alert'),
+      reHeader = document.querySelector('#im')
 
 var dolar = 58;
-var euro = 66;
+var euro = 65;
 
 // -----Clases------
 
 class Interfaz {
     imprimir(valor, place, style, alert) {
-        inputVal.placeholder = `${place}`
+        inputVal.placeholder = `${place}`;
 
+        // debug
+        console.log(valor);
         console.log(`${place}`);
-        
+        console.log(style);
+        console.log(alert);
+
         // mostrar los inputs
         inputVal.classList = `form-control ${style} `;
         inputResultado.classList = `form-control ${style} `;
@@ -37,22 +41,21 @@ class Interfaz {
             // mostramos el total
             inputResultado.value = sumatoria
         })
-        alerta.innerHTML = `
+        alerta.innerHTML += `
             <div class="alert  text-white text-center " role="alert">
                 ${alert} 
             </div>
         `;
         setTimeout( () => {
-            alerta.innerHTML = `
-            `;
+            alerta.innerHTML = ''
         },3000)
     };
 }
+
 // -----Event Listener------
 
 // event dolar
 btnDolar.addEventListener('click', () => {
-
     convertirDolar();
 });
 // event euro
@@ -60,11 +63,11 @@ btnEu.addEventListener('click', () => {
     convertirEuro();
 });
 
-// -----Funciones------
+// -----Functions------
 
-//convertir dolar
-function convertirDolar() {
-    // creamos una nueva ui
+// function convertir dolar
+const convertirDolar = () => {
+    // llamamos a la clase
     const ui = new Interfaz();
 
     // agregamos los datos para convertir y llamamos a la clase
@@ -74,15 +77,17 @@ function convertirDolar() {
         'dolar',
         'Dolar a Peso Dominicano'
     );
+    document.querySelector('.d-alert div').style.background = '#e74c3c';
+    reHeader.innerHTML = `Precio del Dolar: $${dolar}`;
+
 
     inputVal.value = '';
     inputResultado.value = '';
-
 };
 
-// convertir euro
-function convertirEuro() {
-    // creamos una nueva ui
+// function convertir euro
+const convertirEuro = () => {
+    // llamamos a la clase
     const ui = new Interfaz();
 
     // agregamos los datos para convertir y llamamos a la clase
@@ -91,8 +96,19 @@ function convertirEuro() {
         'Euro', 
         'euro',
         'Euro a Peso Dominicano'
-
     );
+
+    document.querySelector('.d-alert div').style.background = '#3498db';
+    reHeader.innerHTML = `Precio del Euro: $${euro}`;
+
     inputVal.value = '';
     inputResultado.value = '';
 }
+
+console.log(`
+    Creado por @robertrm0 con ❤
+
+    Dejame una ⭐ en mi repo 👉 https://robertrm0.github.io/
+
+    Compartelo con tus amigos y familiares ❤
+`);
