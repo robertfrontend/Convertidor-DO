@@ -11,41 +11,27 @@
 
     <div class="d-alert">
     </div>
-    <header>
-        <div class="container">
-            <div class="d-header">
-                <div class="logo">
-                    <p>
-                        CNVPS
-                    </p>
-                </div>
-                <div class="preci">
-                    <p id="im">Precio del $</p>
-                </div>
-            </div>
-        </div>
-    </header>
     <div class="container">
         <main class="main-app">
             <div class="app">
                 <header>
                     <h1>Convertidor de Peso Dominicano</h1>
                 </header>
-                <section class="seccionBotones">
-                    <div class="botones">
-                        <div class="d-usa" id="dolar">
-                            <p>
-                                Dolar a Peso Dominicano
-                            </p>
-                        </div>
-                        <div class="d-eu" id="euro" >
-                            <p>
-                                Euro a Peso Dominicano
-                            </p>
+
+                <section class="seccion-monedas">
+                    <div class="selector">
+                        <a href="#seleccion" id="abrirSelect" >
+                            👇 Toca para Selecionar Moneda 👇
+                        </a>
+                        <div class="d-monedas" id="seleccion">
+                            <a href="#seccionInput" id="dolarSE" >Dolar</a>
+                            <a href="#seccionInput" id="euroSE" >Euro</a>
+                            <a href="#seccionInput" id="mexicoSE" >Peso Mexicano</a>
+                            <a href="#seccionInput" id="colombiaSE" >Peso Colombiano</a>
                         </div>
                     </div>
                 </section>
-                <section class="seccionInput">
+                <section class="seccionInput" id="seccionInput" >
                     <p id="formato" >
                         Seleciona que quieres convertir
                     </p>
@@ -62,7 +48,6 @@
                 </section>
             </div>
         </main>
-
     </div>
 
     <footer>

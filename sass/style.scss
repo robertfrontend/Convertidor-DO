@@ -72,8 +72,8 @@ header{
     justify-content: center;
     align-items: center;
     .app{
-        width:60%;
-        padding: 50px;
+        width:80%;
+        padding: 100px;
         border-radius: 20px;
         background-color: #2c3e50;
         header{
@@ -118,21 +118,6 @@ header{
                         font-weight: bold;
                     }
                 }
-                .d-usa{
-                    border: 2px solid #e74c3c;
-                    background-color: #e74c3c;
-                    p {
-                        color: white !important;
-                    }
-                }
-                .d-eu {
-                    border: 2px solid #3498db;
-                    background-color:#3498db !important;
-                    p{
-                        color: white !important;
-                    }
-
-                }
                 .spanInvertir{
                     cursor: pointer;
                     padding: 20px;
@@ -140,7 +125,68 @@ header{
                     font-size: 50px;
                 }
             }
-            
+        }
+        // mi selector
+        .seccion-monedas{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0px;
+            z-index: 100;
+            .selector{
+                position: relative;
+                width: 80%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border: 2px solid white;
+                padding: 5px 20px;
+                border-radius: 10px;
+                a{
+                    text-decoration: none;
+                    font-size: 18px;
+                    color: white;
+                }
+                .d-monedas{
+                    position: absolute;
+                    display: none;
+                }
+                .abrirDmonedas{
+                    transition: all .4s;
+                    position: absolute;
+                    width: 100%;
+                    bottom: 40px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #ecf0f1;
+                    border-radius: 10px;
+                    padding: 20px 0px;
+                    border: 2px solid #2c3e50;
+                    a {
+                        font-size: 20px;
+                        padding: 5px 0px;
+                        color: #2c3e50;
+                        font-weight: bold;
+                    }
+                    #dolarSE{
+                        color: #D70823;
+                    }
+                    #euroSE{
+                        color: #003399;
+                    }
+                    #mexicoSE{
+                        color: #006847;
+                    }
+                    #colombiaSE {
+                        color: #F4CA15;
+                    }
+                }
+            }
         }
         .seccionInput{
             width: 100%;
@@ -190,14 +236,28 @@ header{
                     .dolar {
                         display: block;
                         width: 90%;
-                        border: 4px solid #e74c3c;
+                        border: 4px solid #D70823;
                         padding: 20px;
                         border-radius: 10px;
                     }
                     .euro {
                         display: block;
                         width: 90%;
-                        border: 4px solid #3498db;
+                        border: 4px solid #003399;
+                        padding: 20px;
+                        border-radius: 10px;
+                    }
+                    .mexicano {
+                        display: block;
+                        width: 90%;
+                        border: 4px solid #006847;
+                        padding: 20px;
+                        border-radius: 10px;
+                    }
+                    .colombia {
+                        display: block;
+                        width: 90%;
+                        border: 4px solid #F4CA15;
                         padding: 20px;
                         border-radius: 10px;
                     }
@@ -218,65 +278,6 @@ header{
         }
     }
 }
-
-
-
-.d-selecion{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    div {
-        padding: 20px 50px;
-        border: 2px solid black;
-        margin: 0px 20px;
-        border-radius: 10px;
-        cursor: pointer;
-        p {
-            font-size: 20px;
-            margin: 0;
-            color: white;
-            font-weight: bold;
-        }
-    }
-    .selecionUs{
-        border: 2px solid #343A40;
-        p {
-            color: #343A40;
-        }
-        &:hover{
-            transition: all .2s ease-out;
-            background-color:#343A40 !important;
-            p{
-                color: white !important;
-            }
-        }
-    }
-    .selecionEu {
-        border: 2px solid #007BFF;
-        p{
-            color: #007BFF;
-        }
-        &:hover{
-            transition: all .2s ease-out;
-            background-color:#007BFF !important;
-            p{
-                color: white !important;
-            }
-        }
-    }
-
-    @media screen and(max-width:792px){
-        flex-wrap: wrap !important;
-        div{
-            width: 100%;
-            margin: 10px 20px;
-            padding: 20px 10px !important;
-        }
-    }
-}
-
 
 .convertidor{
     width: 100%;
@@ -357,6 +358,7 @@ header{
         }
     }
 }
+
 
 footer {
     width: 100%;

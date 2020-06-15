@@ -1,6 +1,6 @@
 // -----Variables------
 
-const btnDolar = document.getElementById('dolar'),
+export const btnDolar = document.getElementById('dolar'),
       btnEu = document.getElementById('euro'),
       inputVal = document.getElementById('inputValor'),
       inputResultado = document.getElementById('result'),
@@ -8,10 +8,20 @@ const btnDolar = document.getElementById('dolar'),
       tsDolar = document.querySelector('#ts-dolar'),
       tsEuro = document.querySelector('#ts-euro'),
       alerta = document.querySelector('.d-alert'),
-      reHeader = document.querySelector('#im')
+      reHeader = document.querySelector('im'),
 
+     // variables de mi select
+      selector = document.querySelector('#abrirSelect'),
+      dolarSE = document.querySelector('#dolarSE'),
+      euroSE = document.querySelector('#euroSE'),
+      mexicoSE = document.querySelector('#mexicoSE'),
+      colombiaSE = document.querySelector('#colombiaSE')
+
+// valores de monedas
 var dolar = 58;
-var euro = 65;
+var euro = 66;
+var mexico = 2.63;
+var colombiano = 0.016;
 
 // -----Clases------
 
@@ -54,61 +64,90 @@ class Interfaz {
 
 // -----Event Listener------
 
-// event dolar
-btnDolar.addEventListener('click', () => {
+selector.addEventListener('click', () => {
+    abrirSelector();
+})
+
+dolarSE.addEventListener('click', () => {
     convertirDolar();
-});
-// event euro
-btnEu.addEventListener('click', () => {
+} )
+
+euroSE.addEventListener('click', () => {
     convertirEuro();
-});
+} )
+
+mexicoSE.addEventListener('click', () =>{
+    convertirMexicano();
+})
+
+colombiaSE.addEventListener('click', () =>{
+    convertirColombiano();
+})
 
 // -----Functions------
+const abrirSelector = () => {
 
-// function convertir dolar
-const convertirDolar = () => {
-    // llamamos a la clase
-    const ui = new Interfaz();
+    let selecion = document.querySelector('.d-monedas')
 
-    // agregamos los datos para convertir y llamamos a la clase
-    ui.imprimir(
-        dolar, 
-        'Dolar', 
-        'dolar',
-        'Dolar a Peso Dominicano'
-    );
-    document.querySelector('.d-alert div').style.background = '#e74c3c';
-    reHeader.innerHTML = `Precio del Dolar: $${dolar}`;
-
-
-    inputVal.value = '';
-    inputResultado.value = '';
-};
-
-// function convertir euro
-const convertirEuro = () => {
-    // llamamos a la clase
-    const ui = new Interfaz();
-
-    // agregamos los datos para convertir y llamamos a la clase
-    ui.imprimir(
-        euro, 
-        'Euro', 
-        'euro',
-        'Euro a Peso Dominicano'
-    );
-
-    document.querySelector('.d-alert div').style.background = '#3498db';
-    reHeader.innerHTML = `Precio del Euro: $${euro}`;
-
-    inputVal.value = '';
-    inputResultado.value = '';
+    selecion.classList.toggle('abrirDmonedas')
 }
 
-console.log(`
-    Creado por @robertrm0 con ❤
+const convertirDolar = () => {
+    const ui = new Interfaz();
+    ui.imprimir(
+        dolar,
+        'Dolar',
+        'dolar',
+        'Dolar a Peso Dominicano'
+    )
+    let selecion = document.querySelector('.d-monedas')
 
-    Dejame una ⭐ en mi repo 👉 https://robertrm0.github.io/
+    selecion.classList = 'd-monedas'
+}
 
-    Compartelo con tus amigos y familiares ❤
-`);
+const convertirEuro = () => {
+    const ui = new Interfaz();
+    ui.imprimir(
+        euro,
+        'Euro',
+        'euro',
+        'Euro a Peso Dominicano'
+    )
+    let selecion = document.querySelector('.d-monedas')
+
+    selecion.classList = 'd-monedas'
+}
+
+const convertirMexicano = () => {
+    const ui = new Interfaz();
+    ui.imprimir(
+        mexico,
+        'Peso Mexicano',
+        'mexicano',
+        'Peso Mexicano a Peso Dominicano'
+    )
+    let selecion = document.querySelector('.d-monedas')
+
+    selecion.classList = 'd-monedas'
+}
+
+const convertirColombiano = () => {
+    const ui = new Interfaz();
+    ui.imprimir(
+        colombiano,
+        'Peso Colombiano',
+        'colombia',
+        'Peso Colombiano a Peso Dominicano'
+    )
+    let selecion = document.querySelector('.d-monedas')
+
+    selecion.classList = 'd-monedas'
+}
+// console.log(`
+//     Creado por @robertrm0 con ❤
+
+//     Dejame una ⭐ en mi repo 👉 https://robertrm0.github.io/
+
+//     Compartelo con tus amigos y familiares ❤
+// `);
+
