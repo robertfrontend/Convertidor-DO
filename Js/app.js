@@ -88,7 +88,7 @@ colombiaSE.addEventListener('click', () =>{
 const abrirSelector = () => {
 
     let selecion = document.querySelector('.d-monedas')
-
+    selecion.style.transition = 'all 1.2s'
     selecion.classList.toggle('abrirDmonedas')
 }
 
