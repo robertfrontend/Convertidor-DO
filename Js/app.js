@@ -51,14 +51,6 @@ class Interfaz {
             // mostramos el total
             inputResultado.value = sumatoria
         })
-        alerta.innerHTML += `
-            <div class="alert  text-white text-center " role="alert">
-                ${alert} 
-            </div>
-        `;
-        setTimeout( () => {
-            alerta.innerHTML = ''
-        },3000)
     };
 }
 
@@ -98,7 +90,6 @@ const convertirDolar = () => {
         dolar,
         'Dolar',
         'dolar',
-        'Dolar a Peso Dominicano'
     )
     let selecion = document.querySelector('.d-monedas')
 
@@ -111,7 +102,6 @@ const convertirEuro = () => {
         euro,
         'Euro',
         'euro',
-        'Euro a Peso Dominicano'
     )
     let selecion = document.querySelector('.d-monedas')
 
@@ -124,7 +114,6 @@ const convertirMexicano = () => {
         mexico,
         'Peso Mexicano',
         'mexicano',
-        'Peso Mexicano a Peso Dominicano'
     )
     let selecion = document.querySelector('.d-monedas')
 
@@ -137,7 +126,6 @@ const convertirColombiano = () => {
         colombiano,
         'Peso Colombiano',
         'colombia',
-        'Peso Colombiano a Peso Dominicano'
     )
     let selecion = document.querySelector('.d-monedas')
 
