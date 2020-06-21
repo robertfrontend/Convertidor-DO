@@ -1,14 +1,14 @@
 // -----Variables------
 
-export const btnDolar = document.getElementById('dolar'),
-      btnEu = document.getElementById('euro'),
+export const 
+      // input para ingresar valores
       inputVal = document.getElementById('inputValor'),
+
+      // input para el resultado
       inputResultado = document.getElementById('result'),
+
+      // mostrar cual es el tipo de cambio
       formato = document.getElementById('formato'),
-      tsDolar = document.querySelector('#ts-dolar'),
-      tsEuro = document.querySelector('#ts-euro'),
-      alerta = document.querySelector('.d-alert'),
-      reHeader = document.querySelector('im'),
 
      // variables de mi select
       selector = document.querySelector('#abrirSelect'),
@@ -19,21 +19,21 @@ export const btnDolar = document.getElementById('dolar'),
 
 // valores de monedas
 var dolar = 58;
-var euro = 66;
-var mexico = 2.63;
+var euro = 65;
+var mexico = 3;
 var colombiano = 0.016;
 
 // -----Clases------
 
 class Interfaz {
-    imprimir(valor, place, style, alert) {
+    // Interfaz para mostrar los campos
+    imprimir(valor, place, style) {
         inputVal.placeholder = `${place}`;
 
         // debug
         console.log(valor);
         console.log(`${place}`);
         console.log(style);
-        console.log(alert);
 
         // mostrar los inputs
         inputVal.classList = `form-control ${style} `;
@@ -57,22 +57,27 @@ class Interfaz {
 // -----Event Listener------
 
 selector.addEventListener('click', () => {
+    // llamamos a la funcion abrirSelector
     abrirSelector();
 })
 
 dolarSE.addEventListener('click', () => {
-    convertirDolar();
-} )
+    // funcion para convertir dolar
+     convertirDolar();
+})
 
 euroSE.addEventListener('click', () => {
+    // funcion para convertir euro
     convertirEuro();
 } )
 
 mexicoSE.addEventListener('click', () =>{
+    // funcion para convertir en peso mexicano
     convertirMexicano();
 })
 
 colombiaSE.addEventListener('click', () =>{
+    // funcion para convertir en peso colombiano
     convertirColombiano();
 })
 
@@ -87,55 +92,54 @@ const abrirSelector = () => {
 const convertirDolar = () => {
     const ui = new Interfaz();
     ui.imprimir(
-        dolar,
-        'Dolar',
-        'dolar',
+        dolar, // moneda
+        'Dolar', // nombre input
+        'dolar' // agregar input
     )
-    let selecion = document.querySelector('.d-monedas')
+    let selecion = document.querySelector('.d-monedas');
 
-    selecion.classList = 'd-monedas'
+    selecion.classList = 'd-monedas';
 }
 
 const convertirEuro = () => {
     const ui = new Interfaz();
     ui.imprimir(
-        euro,
-        'Euro',
-        'euro',
+        euro, // moneda
+        'Euro', // nombre input
+        'euro' // agregar input
     )
-    let selecion = document.querySelector('.d-monedas')
+    let selecion = document.querySelector('.d-monedas');
 
-    selecion.classList = 'd-monedas'
+    selecion.classList = 'd-monedas';
 }
 
 const convertirMexicano = () => {
     const ui = new Interfaz();
     ui.imprimir(
-        mexico,
-        'Peso Mexicano',
-        'mexicano',
+        mexico, // moneda
+        'Peso Mexicano', // nombre input
+        'mexicano' // agregar input
     )
-    let selecion = document.querySelector('.d-monedas')
+    let selecion = document.querySelector('.d-monedas');
 
-    selecion.classList = 'd-monedas'
+    selecion.classList = 'd-monedas';
 }
 
 const convertirColombiano = () => {
     const ui = new Interfaz();
     ui.imprimir(
-        colombiano,
-        'Peso Colombiano',
-        'colombia',
+        colombiano, // moneda
+        'Peso Colombiano', // nombre input
+        'colombia' // agregar inputs
     )
     let selecion = document.querySelector('.d-monedas')
 
     selecion.classList = 'd-monedas'
 }
-// console.log(`
-//     Creado por @robertrm0 con ❤
+console.log(`
+     Creado por @robertrm0 con ❤
 
-//     Dejame una ⭐ en mi repo 👉 https://robertrm0.github.io/
+     Dejame una ⭐ en mi repo 👉 https://robertrm0.github.io/
 
-//     Compartelo con tus amigos y familiares ❤
-// `);
-
+     Compartelo con tus amigos y familiares ❤
+`);
